@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "handoff",
+  "version": "0.1.0",
+  "description": "Session handoffs on a Plane board: the goal as a parent work item, the next steps as sub-items, the state as one comment, with hooks that show the board at session start and advise when to compact.",
+  "author": {
+    "name": "nemesis398",
+    "url": "https://github.com/nemesis398"
+  },
+  "homepage": "https://github.com/nemesis398/handoff",
+  "repository": "https://github.com/nemesis398/handoff",
+  "license": "MIT",
+  "keywords": [
+    "handoff",
+    "plane",
+    "session-state",
+    "compaction",
+    "hooks"
+  ]
+}

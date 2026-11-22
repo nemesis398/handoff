@@ -1,0 +1,38 @@
+{
+  "description": "The handoff board at session start, the compaction advice at a turn's end, and its re-arming before a compaction.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -B \"${CLAUDE_PLUGIN_ROOT}/skills/handoff/adapters/claude/sessionstart.py\" || true",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -B \"${CLAUDE_PLUGIN_ROOT}/skills/handoff/adapters/claude/stop.py\" || true",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -B \"${CLAUDE_PLUGIN_ROOT}/skills/handoff/adapters/claude/precompact.py\" || true",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

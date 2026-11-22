@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "handoff",
+  "owner": {
+    "name": "nemesis398",
+    "url": "https://github.com/nemesis398"
+  },
+  "metadata": {
+    "description": "The handoff skill for Claude Code, as a marketplace of one."
+  },
+  "plugins": [
+    {
+      "name": "handoff",
+      "source": "./",
+      "description": "Session handoffs on a Plane board, with hooks that show the board at session start and advise when to compact."
+    }
+  ]
+}
