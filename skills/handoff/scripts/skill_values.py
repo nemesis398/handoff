@@ -47,6 +47,9 @@ STEPS = {
 # Keys that never stop anything: printed when set, left out when not.
 OPTIONAL = {"user.name"}
 
+# Keys that show a value of their own, also when the key is not set.
+SHOWN = {}
+
 # ---- body ----
 # Everything below this line is the same in every skill that has values.
 
@@ -130,6 +133,8 @@ def command(key: str, values: dict | None = None) -> str | None:
 
 def current(key: str, kind: type, values: dict) -> object:
     """What the Values line of `key` shows, or None when it is not set."""
+    if key in SHOWN:
+        return SHOWN[key](values)
     if "command" in STEPS.get(key, {}):
         return command(key, values)
     return get(key, kind, values)

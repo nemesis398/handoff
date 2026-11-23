@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1
+
+- `skill_values.py` takes the body shared with ai-memory and journal:
+  the same code below `# ---- body ----`, with the `SHOWN` hook for keys that
+  show a value of their own. Handoff shows no such key yet, so its output is
+  unchanged.
+
 ## 0.1.0
 
 - The handoff skill as a plugin of its own: the skill, its scripts and tests,
